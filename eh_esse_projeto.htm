@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>http://www.criarsites.me/html5-tutorial/</title><link rel="stylesheet" type="text/css" href="eh_esse_projeto_arquivos/viewsource.css"></head><body contextmenu="actions" id="viewsource" class="wrap highlight" style="-moz-tab-size: 4"><pre id="line1"><span></span><span class="doctype">&lt;!doctype html&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">html</span> <span class="attribute-name">lang</span>="<a class="attribute-value">pt-br</a>"&gt;</span><span>
+<span id="line3"></span></span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line4"></span>    </span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>Tema HTML5 site de uma página | Criarsites.me Demo</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line5"></span>    </span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">charset</span>="<a class="attribute-value">UTF-8</a>"&gt;</span><span>
+<span id="line6"></span>    </span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">shortcut icon</a>" <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/image/favicon.ico" class="attribute-value">image/favicon.ico</a>"&gt;</span><span>
+<span id="line7"></span>	</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/style.css" class="attribute-value">style.css</a>" <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">media</span>="<a class="attribute-value">all</a>"&gt;</span><span>
+<span id="line8"></span></span><span class="comment">&lt;!-- Internet Explorer HTML5 enabling script: --&gt;</span><span>
+<span id="line9"></span>	</span><span class="comment">&lt;!--[if IE]&gt;
+<span id="line10"></span>		&lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+<span id="line11"></span>		&lt;style type="text/css"&gt;
+<span id="line12"></span>
+<span id="line13"></span>			.clear {
+<span id="line14"></span>				zoom: 1;
+<span id="line15"></span>				display: block;
+<span id="line16"></span>			}
+<span id="line17"></span>
+<span id="line18"></span>		&lt;/style&gt;
+<span id="line19"></span>	&lt;![endif]--&gt;</span><span>
+<span id="line20"></span>	</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/css/skitter.styles.css" class="attribute-value">css/skitter.styles.css</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">media</span>="<a class="attribute-value">all</a>" <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span>/</span>&gt;</span><span>
+<span id="line21"></span>	</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/js/jquery-1.6.3.min.js" class="attribute-value">js/jquery-1.6.3.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line22"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/js/jquery.easing.1.3.js" class="attribute-value">js/jquery.easing.1.3.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line23"></span>	</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/js/jquery.animate-colors-min.js" class="attribute-value">js/jquery.animate-colors-min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line24"></span>	</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/js/jquery.skitter.min.js" class="attribute-value">js/jquery.skitter.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line25"></span></span><span class="comment">&lt;!-- Init Plugin --&gt;</span><span>
+<span id="line26"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line27"></span>	$(document).ready(function() {
+<span id="line28"></span>		$(".box_skitter_large").skitter({
+<span id="line29"></span>			numbers_align: "center", 
+<span id="line30"></span>			animation: 'showBarsRandom',
+<span id="line31"></span>		    velocity: 				1,
+<span id="line32"></span>		    interval: 				5000, 
+<span id="line33"></span>			animateNumberOut: 		{backgroundColor:'#333', color:'#fff'},
+<span id="line34"></span>		    animateNumberOver: 		{backgroundColor:'#CCC', color:'#000'},
+<span id="line35"></span>		    animateNumberActive: 	{backgroundColor:'#069', color:'#fff'},
+<span id="line36"></span>			label:false,
+<span id="line37"></span>			hideTools: true,
+<span id="line38"></span>			numbers: false,
+<span id="line39"></span>			dots: true,
+<span id="line40"></span>			controls: false,
+<span id="line41"></span>			navigation:	false,
+<span id="line42"></span> 			progressbar: false, 
+<span id="line43"></span>			enable_navigation_keys:	true,
+<span id="line44"></span> 			progressbar_css: { 
+<span id="line45"></span>				top:'0px', 
+<span id="line46"></span>				left:'0px', 
+<span id="line47"></span>				height:2, 
+<span id="line48"></span>				borderRadius:'2px', 
+<span id="line49"></span>				width:620, 
+<span id="line50"></span>				backgroundColor:'#333', 
+<span id="line51"></span>				opacity:.5 
+<span id="line52"></span>			}, 
+<span id="line53"></span>		});
+<span id="line54"></span>	});
+<span id="line55"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line56"></span></span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line57"></span></span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line58"></span>      </span><span>&lt;<span class="start-tag">header</span>&gt;</span><span>
+<span id="line59"></span>	       </span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Seu Logo</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line60"></span>	  </span><span>&lt;/<span class="end-tag">header</span>&gt;</span><span>
+<span id="line61"></span>	  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">nav-total</a>"&gt;</span><span>
+<span id="line62"></span>	      </span><span>&lt;<span class="start-tag">nav</span>&gt;</span><span>
+<span id="line63"></span>		      </span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line64"></span>			      </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#" class="attribute-value">#</a>"&gt;</span><span>Início</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line65"></span>			      </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#artigo1" class="attribute-value">#artigo1</a>"&gt;</span><span>Produto</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line66"></span>				  </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#artigo2" class="attribute-value">#artigo2</a>"&gt;</span><span>Sobre</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line67"></span>				  </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#artigo3" class="attribute-value">#artigo3</a>"&gt;</span><span>Serviços</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line68"></span>				  </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#artigo4" class="attribute-value">#artigo4</a>"&gt;</span><span>Localização</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line69"></span>				  </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#artigo5" class="attribute-value">#artigo5</a>"&gt;</span><span>Contato</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line70"></span>			  </span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line71"></span>			  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">clear</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span> 
+<span id="line72"></span>	      </span><span>&lt;/<span class="end-tag">nav</span>&gt;</span><span>
+<span id="line73"></span>	  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line74"></span>      </span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">id</span>="<a class="attribute-value">pagina-total</a>"&gt;</span><span>
+<span id="line75"></span>	      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">box-slide</a>"&gt;</span><span>
+<span id="line76"></span>          </span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">id</span>="<a class="attribute-value">slide</a>"&gt;</span><span>
+<span id="line77"></span>		      </span><span>&lt;<span class="start-tag">section</span> <span class="attribute-name">id</span>="<a class="attribute-value">slide-centro</a>"&gt;</span><span>
+<span id="line78"></span>			        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">box_skitter box_skitter_large</a>"&gt;</span><span>
+<span id="line79"></span>				        </span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line80"></span>					    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#" class="attribute-value">#</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/img/slide-1.jpg" class="attribute-value">img/slide-1.jpg</a>" <span class="attribute-name">class</span>="<a class="attribute-value">cube</a>" <span>/</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line81"></span>					    </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#" class="attribute-value">#</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/img/slide-2.jpg" class="attribute-value">img/slide-2.jpg</a>" <span class="attribute-name">class</span>="<a class="attribute-value">block</a>" <span>/</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line82"></span>						</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>	
+<span id="line83"></span>				     </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line84"></span>		      </span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line85"></span>		  </span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line86"></span>		  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line87"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">borda</a>"&gt;</span><span>
+<span id="line88"></span>		      </span><span>&lt;<span class="start-tag">article</span> <span class="attribute-name">id</span>="<a class="attribute-value">artigo1</a>"&gt;</span><span>
+<span id="line89"></span>			  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">fundo-linha</a>"&gt;</span><span>
+<span id="line90"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">artigos</a>"&gt;</span><span>
+<span id="line91"></span>				      </span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>PRODUTO</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line92"></span>			          </span><span>&lt;<span class="start-tag">figure</span>&gt;</span><span>
+<span id="line93"></span>				          </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/img/figure-1.jpg" class="attribute-value">img/figure-1.jpg</a>"&gt;</span><span>
+<span id="line94"></span>				      </span><span>&lt;/<span class="end-tag">figure</span>&gt;</span><span>
+<span id="line95"></span>                      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line96"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line97"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<span id="line98"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line99"></span>					   </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line100"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line101"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magn volutpat. Ut wisi enim ad 
+minim veniam</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line102"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line103"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line104"></span>			  </span><span>&lt;/<span class="end-tag">article</span>&gt;</span><span>
+<span id="line105"></span>		      </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line106"></span>			  
+<span id="line107"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">borda</a>"&gt;</span><span>
+<span id="line108"></span>		      </span><span>&lt;<span class="start-tag">article</span> <span class="attribute-name">id</span>="<a class="attribute-value">artigo2</a>"&gt;</span><span>
+<span id="line109"></span>			  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">fundo-linha</a>"&gt;</span><span>
+<span id="line110"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">artigos</a>"&gt;</span><span>
+<span id="line111"></span>				      </span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>SOBRE</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line112"></span>			          </span><span>&lt;<span class="start-tag">figure</span>&gt;</span><span>
+<span id="line113"></span>				          </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/img/figure-1.jpg" class="attribute-value">img/figure-1.jpg</a>"&gt;</span><span>
+<span id="line114"></span>				      </span><span>&lt;/<span class="end-tag">figure</span>&gt;</span><span>
+<span id="line115"></span>                      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line116"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line117"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<span id="line118"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line119"></span>					   </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line120"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line121"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magn volutpat. Ut wisi enim ad 
+minim veniam</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line122"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line123"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line124"></span>			  </span><span>&lt;/<span class="end-tag">article</span>&gt;</span><span>
+<span id="line125"></span>		      </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line126"></span>			  
+<span id="line127"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">borda</a>"&gt;</span><span>
+<span id="line128"></span>		      </span><span>&lt;<span class="start-tag">article</span> <span class="attribute-name">id</span>="<a class="attribute-value">artigo3</a>"&gt;</span><span>
+<span id="line129"></span>			  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">fundo-linha</a>"&gt;</span><span>
+<span id="line130"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">artigos</a>"&gt;</span><span>
+<span id="line131"></span>				      </span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>SERVIÇOS</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line132"></span>                      </span><span>&lt;<span class="start-tag">figure</span>&gt;</span><span>
+<span id="line133"></span>				          </span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/img/figure-1.jpg" class="attribute-value">img/figure-1.jpg</a>"&gt;</span><span>
+<span id="line134"></span>				      </span><span>&lt;/<span class="end-tag">figure</span>&gt;</span><span>
+<span id="line135"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line136"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line137"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<span id="line138"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line139"></span>					   </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line140"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span><span>/</span>&gt;</span><span>
+<span id="line141"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magn volutpat. Ut wisi enim ad 
+minim veniam</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line142"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line143"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line144"></span>			  </span><span>&lt;/<span class="end-tag">article</span>&gt;</span><span>
+<span id="line145"></span>		      </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line146"></span>			  
+<span id="line147"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">borda</a>"&gt;</span><span>
+<span id="line148"></span>		      </span><span>&lt;<span class="start-tag">article</span> <span class="attribute-name">id</span>="<a class="attribute-value">artigo4</a>"&gt;</span><span>
+<span id="line149"></span>			  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">fundo-linha</a>"&gt;</span><span>
+<span id="line150"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">artigos</a>"&gt;</span><span>
+<span id="line151"></span>				      </span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>LOCALIZAÇÃO</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line152"></span>					  </span><span>&lt;<span class="start-tag">iframe</span> <span class="attribute-name">class</span>="<a class="attribute-value">mapa</a>" <span class="attribute-name">src</span>="<a href="view-source:http://www.map-generator.org/b73d9dfc-4606-4108-b1fd-342c984909c7/iframe-map.aspx" class="attribute-value">http://www.map-generator.org/b73d9dfc-4606-4108-b1fd-342c984909c7/iframe-map.aspx</a>" <span class="attribute-name">scrolling</span>="<a class="attribute-value">no</a>" <span class="attribute-name">height</span>="<a class="attribute-value">400px</a>" <span class="attribute-name">width</span>="<a class="attribute-value">300px</a>" <span class="attribute-name">frameborder</span>="<a class="attribute-value">0</a>" <span title="Atributo duplicado." class="attribute-name error">scrolling</span>="<a class="attribute-value">no</a>" <span class="attribute-name">marginheight</span>="<a class="attribute-value">0</a>" <span class="attribute-name">marginwidth</span>="<a class="attribute-value">0</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">iframe</span>&gt;</span><span></span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line153"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line154"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line155"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+<span id="line156"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line157"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magn volutpat. Ut wisi enim ad 
+minim veniam</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line158"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line159"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line160"></span>			  </span><span>&lt;/<span class="end-tag">article</span>&gt;</span><span>
+<span id="line161"></span>		      </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line162"></span>			  
+<span id="line163"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">borda</a>"&gt;</span><span>
+<span id="line164"></span>		      </span><span>&lt;<span class="start-tag">article</span> <span class="attribute-name">id</span>="<a class="attribute-value">artigo5</a>"&gt;</span><span>
+<span id="line165"></span>			  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">fundo-linha</a>"&gt;</span><span>
+<span id="line166"></span>		      </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">artigos</a>"&gt;</span><span>
+<span id="line167"></span>				      </span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>CONTATO</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line168"></span>					  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">contato</a>"&gt;</span><span>
+<span id="line169"></span>                          </span><span>&lt;<span class="start-tag">ul</span> <span class="attribute-name">class</span>="<a class="attribute-value">redes</a>"&gt;</span><span> 
+<span id="line170"></span>                              </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>='<a class="attribute-value">titulo</a>' <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>" <span class="attribute-name">title</span>="<a class="attribute-value">Twitter</a>" <span class="attribute-name">href</span>="<a href="view-source:https://www.twitter.com/emstudioweb" class="attribute-value">https://www.twitter.com/emstudioweb</a>"&gt;</span><span>t</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line171"></span>				              </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>='<a class="attribute-value">titulo</a>' <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>" <span class="attribute-name">title</span>="<a class="attribute-value">Twitter</a>" <span class="attribute-name">href</span>="<a href="view-source:https://www.twitter.com/emstudioweb" class="attribute-value">https://www.twitter.com/emstudioweb</a>"&gt;</span><span>y</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line172"></span>			                  </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>='<a class="attribute-value">titulo</a>' <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>" <span class="attribute-name">title</span>="<a class="attribute-value">Facebook</a>" <span class="attribute-name">href</span>="<a href="view-source:http://www.facebook.com/emstudioweb" class="attribute-value">http://www.facebook.com/emstudioweb</a>"&gt;</span><span>f</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line173"></span>			                  </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>='<a class="attribute-value">titulo</a>' <span class="attribute-name">title</span>="<a class="attribute-value">Google+</a>" <span class="attribute-name">rel</span>="<a class="attribute-value">publisher</a>" <span class="attribute-name">href</span>="<a href="view-source:https://plus.google.com/103089450570379586868" class="attribute-value">https://plus.google.com/103089450570379586868</a>"&gt;</span><span>g</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line174"></span>				              </span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">class</span>='<a class="attribute-value">titulo</a>' <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>" <span class="attribute-name">title</span>="<a class="attribute-value">Twitter</a>" <span class="attribute-name">href</span>="<a href="view-source:https://www.twitter.com/emstudioweb" class="attribute-value">https://www.twitter.com/emstudioweb</a>"&gt;</span><span>r</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line175"></span>			              </span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line176"></span>				      </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Lorem
+ ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+<span id="line177"></span>				      Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line178"></span>					  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line179"></span>		              </span><span>&lt;<span class="start-tag">form</span> <span class="attribute-name">class</span>="<a class="attribute-value">form</a>"&gt;</span><span>  
+<span id="line180"></span>                          </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">name</a>"&gt;</span><span>  
+<span id="line181"></span>                              </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">name</span>="<a class="attribute-value">name</a>" <span class="attribute-name">id</span>="<a class="attribute-value">name</a>" <span>/</span>&gt;</span><span>  
+<span id="line182"></span>                              </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">name</a>"&gt;</span><span>Nome</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>  
+<span id="line183"></span>                          </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>  
+<span id="line184"></span>                          </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">email</a>"&gt;</span><span>  
+<span id="line185"></span>                              </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">name</span>="<a class="attribute-value">email</a>" <span class="attribute-name">id</span>="<a class="attribute-value">email</a>" <span>/</span>&gt;</span><span>  
+<span id="line186"></span>                              </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">email</a>"&gt;</span><span>E-mail</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>  
+<span id="line187"></span>                          </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>  
+<span id="line188"></span>                          </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">web</a>"&gt;</span><span>  
+<span id="line189"></span>                              </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">name</span>="<a class="attribute-value">web</a>" <span class="attribute-name">id</span>="<a class="attribute-value">web</a>" <span>/</span>&gt;</span><span>  
+<span id="line190"></span>                              </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">web</a>"&gt;</span><span>Website</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>  
+<span id="line191"></span>                          </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>  
+<span id="line192"></span>                          </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">text</a>"&gt;</span><span>  
+<span id="line193"></span>                             </span><span>&lt;<span class="start-tag">textarea</span> <span class="attribute-name">name</span>="<a class="attribute-value">text</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">textarea</span>&gt;</span><span>  
+<span id="line194"></span>                          </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>  
+<span id="line195"></span>                          </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">submit</a>"&gt;</span><span>  
+<span id="line196"></span>                          </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">submit</a>" <span class="attribute-name">value</span>="<a class="attribute-value">Send</a>" <span>/</span>&gt;</span><span>  
+<span id="line197"></span>                          </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>  
+<span id="line198"></span>                     </span><span>&lt;/<span class="end-tag">form</span>&gt;</span><span>  
+<span id="line199"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line200"></span>			  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line201"></span>			  </span><span>&lt;/<span class="end-tag">article</span>&gt;</span><span>
+<span id="line202"></span>		      </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line203"></span>      </span><span>&lt;/<span class="end-tag">section</span>&gt;</span><span>
+<span id="line204"></span>	  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">rodape-total</a>"&gt;</span><span>
+<span id="line205"></span>      </span><span>&lt;<span class="start-tag">footer</span>&gt;</span><span>
+<span id="line206"></span>         </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/js/jquery.scrollTo-min.js" class="attribute-value">js/jquery.scrollTo-min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line207"></span>         </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/js/script.js" class="attribute-value">js/script.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line208"></span>		 </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>" <span class="attribute-name">href</span>="<a href="view-source:http://criarsites.me/" class="attribute-value">http://criarsites.me</a>" <span class="attribute-name">class</span>="<a class="attribute-value">direitos</a>"&gt;</span><span>Tema criarsites</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line209"></span>		 </span><span>&lt;<span class="start-tag">small</span> <span class="attribute-name">class</span>="<a class="attribute-value">copy</a>"&gt;</span><span>Copyright© 2013 seu site</span><span>&lt;/<span class="end-tag">small</span>&gt;</span><span>
+<span id="line210"></span>		 </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/#" class="attribute-value">#</a>" <span class="attribute-name">class</span>="<a class="attribute-value">up</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>="<a href="view-source:http://www.criarsites.me/html5-tutorial/img/up.png" class="attribute-value">img/up.png</a>"<span>/</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line211"></span>	  </span><span>&lt;/<span class="end-tag">footer</span>&gt;</span><span>
+<span id="line212"></span>      </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line213"></span></span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line214"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span></span></pre><menu id="actions" type="context"><menuitem accesskey="l" label="Ir para a linha…" id="goToLine"></menuitem><menuitem checked="true" type="checkbox" label="Quebrar linhas" id="wrapLongLines"></menuitem><menuitem checked="true" type="checkbox" label="Realce de sintaxe" id="highlightSyntax"></menuitem></menu></body></html>

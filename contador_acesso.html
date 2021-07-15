@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>file:///C:/Users/FAUSTO~1.SIL/AppData/Local/Temp/contadorjavascript.html</title><link rel="stylesheet" type="text/css" href="contador_acesso_arquivos/viewsource.css"></head><body contextmenu="actions" id="viewsource" class="wrap highlight" style="-moz-tab-size: 4"><pre id="line1"><span></span><span title="Tag de início encontrada sem encontrar um doctype primeiro. Esperado “&lt;!DOCTYPE html&gt;”." class="error">&lt;<span class="start-tag">html</span>&gt;</span><span>
+<span id="line2"></span></span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line3"></span></span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>Sem Título</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line4"></span>
+<span id="line5"></span>
+<span id="line6"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">language</span>="<a class="attribute-value">javascript</a>"&gt;</span><span> 
+<span id="line7"></span>function setCookie(nome, valor, dias){ 
+<span id="line8"></span>diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
+<span id="line9"></span>dias = new Date(diasms); 
+<span id="line10"></span>expires = dias.toGMTString(); 
+<span id="line11"></span>document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
+<span id="line12"></span>} 
+<span id="line13"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line14"></span>
+<span id="line15"></span>
+<span id="line16"></span></span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line17"></span>
+<span id="line18"></span></span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line19"></span>
+<span id="line20"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">language</span>="<a class="attribute-value">javascript</a>"&gt;</span><span>
+<span id="line21"></span>if (!document.cookie){
+<span id="line22"></span>setCookie("cookie", "1", 365);
+<span id="line23"></span>document.write("</span><span>&lt;f</span><span>ont face='verdana' size='1'&gt;Suas Visitas : 1</span><span>&lt;/<span></span>f</span><span>ont&gt;");
+<span id="line24"></span>} else {
+<span id="line25"></span>var cont = document.cookie;
+<span id="line26"></span>var dividindo = cont.split("=");
+<span id="line27"></span>//document.write(dividindo[1]);
+<span id="line28"></span>var numero = parseInt(dividindo[1]);
+<span id="line29"></span>var soma = numero + 1;
+<span id="line30"></span>document.write("</span><span>&lt;f</span><span>ont face='verdana' size='1'&gt;Suas Visitas : " + soma + "</span><span>&lt;/<span></span>f</span><span>ont&gt;");
+<span id="line31"></span>setCookie("cookie", soma, 365);
+<span id="line32"></span>}
+<span id="line33"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span> 
+<span id="line34"></span>
+<span id="line35"></span>
+<span id="line36"></span>
+<span id="line37"></span></span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line38"></span>
+<span id="line39"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span></span></pre><menu id="actions" type="context"><menuitem accesskey="l" label="Ir para a linha…" id="goToLine"></menuitem><menuitem checked="true" type="checkbox" label="Quebrar linhas" id="wrapLongLines"></menuitem><menuitem checked="true" type="checkbox" label="Realce de sintaxe" id="highlightSyntax"></menuitem></menu></body></html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Salão de Beleza Nil Cabeleireiras - Página inicial</title>
+<meta name="google-site-verification" content="1Qj8GXGMjW8eMa5HH6XP-7_2LSPsxBp249EwAxqq1Fk" />
+<meta name="keywords" content="Salao de beleza Moema Nil cabeleireiras Estetica corte de cabelo manicure pedicure tintura de cabelo bronzeamento artificial Moema massagem limpeza de pele em Moema alongamento de cabelo carinas salão de beleza campo belo salão de beleza Brooklin mega hair keune joico loreal tratamento de cabelo dia da noiva moema">
+<meta name="description" content="Salao de Beleza Nil Cabeleireiras no bairro de Moema com proporciona tudo para a beleza da mulher para cabelo e para estética do corpo.">
+<meta http-equiv="keywords" name="keywords" CONTENT=" Salao de beleza Moema Nil cabeleireiras Estetica corte de cabelo ">
+<meta name="Classification" content=" Salao de beleza Moema Nil cabeleireiras Estetica corte de cabelo ">
+
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="jquery-1.3.1.min.js"></script>
+<script language="javascript">
+function mudaImg(para){
+	$("#galeriaJS").html('<img src="images/fotos/' + para + '" />');
+}
+function GerarSWF(arquivo,largura,altura,id){ 
+	document.writeln(' <object id="globalnav-object" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="' + largura + '" height="' + altura + '" id="' + id + '" name="' + id + '">');
+	document.writeln(' <param name="movie" value="' + arquivo + '" />');
+	document.writeln(' <param name="bgcolor" value="#ffffff" />');
+	document.writeln(' <param name="menu" value="false" />');
+	document.writeln(' <param name="quality" value="high" />');
+	document.writeln(' <param name="salign" value="tl" />');
+	document.writeln(' <param name="swliveconnect" value="true" />');
+	document.writeln(' <param name="scale" value="noscale" />');
+	document.writeln(' <param name="wmode" value="transparent" />');
+	document.writeln(' <embed id="globalnav-embed" src="' + arquivo + '" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" flashvars="loc=en_US&htmlApp=false&gatewayURL=gwurl" bgcolor="#ffffff" menu="false" quality="high" salign="tl" scale="noscale" id="' + id + '" width="' + largura + '" height="' + altura + '" swliveconnect="true"></embed>');
+	document.writeln(' </object>');
+} 
+function abreForm(idd){
+	if ($("#" + idd).val() == $("#" + idd).attr('defaultvalue')){
+		$("#" + idd).val('');
+	}
+}
+function fechaForm(idd){
+	if ($("#" + idd).val() == ''){
+		$("#" + idd).val($("#" + idd).attr('defaultvalue'));
+	}
+}
+var antigo;
+var ultimoform;
+function validaForm(param, retorna){
+	var data = $("#" + param).serialize() ;
+	var str = '&' + data+ "&";
+	
+	var action = $("#" + param).attr('action');
+	ultimoform = param;
+	
+	if (str.indexOf("=&") > -1){
+		str = str.substring(0,str.indexOf("=&") );
+		while (str.indexOf("&") > -1){
+			str = str.substring(str.indexOf("&") + 1, str.length );
+		}
+		alert('Por favor, complete o campo ' + str);
+		$('[name=' + str + ']').focus();
+	}else{
+antigo = $("#" + param + " .formBT").html();
+$("#" + param + " .formBT").html('<img src="images/ajax-loader.gif" />');
+$.post(action, data,
+   function(data){
+     $("#" + ultimoform + " .formBT").html(antigo);
+	 if (ultimoform == 'formNews'){
+	 	$("#newsemail").val('E-mail')
+	 }
+	 if (ultimoform == 'formContato'){
+	 	alert('Formulário enviado com sucesso!');
+	 }
+	 if (ultimoform == 'formCadastro'){
+	 	alert('Cadastro enviado com sucesso!');
+	 }	 
+   });	
+}}
+</script>
+</head>
+<body>
+<div id="container">
+	<div id="header">
+    	<a href="/" id="logo"></a>
+        <div class="cadastro">
+            <span>cadastre-se</span>
+            <form action="newsletter.aspx" id="formNews" method="post" onsubmit="validaForm('formNews');return false;">
+            <input name="newsemail" type="text" class="email" id="newsemail" onfocus="abreForm('newsemail')" onblur="fechaForm('newsemail')" value="E-mail" defaultvalue="E-mail" style="color:#666" />
+            <div class="formBT"><input name="" type="submit" class="botao" value="OK" /></div>
+            </form>
+        </div>
+    </div>
+    <div id="painel"><script language="javascript">GerarSWF('images/banner.swf','900px','280px','bannertopo')</script></div>
+    <div id="menu">
+    	<ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="servicos.asp">Serviços</a></li>
+            <li><a href="produtos.asp">Produtos</a></li>
+            <li><a href="javascript:void(0);" onmouseover="abreMenu(2);" onmouseout="fechaMenu();" id="lk2">Corpo</a></li>
+            <li><a href="javascript:void(0);" onmouseover="abreMenu(3);" onmouseout="fechaMenu();" id="lk3">Equipe</a></li>
+            <li><a href="noiva.asp">Noivas</a></li>
+            <li><a href="javascript:void(0);" onmouseover="abreMenu(0);" onmouseout="fechaMenu();" id="lk0">Fotos</a></li>
+            <li><a href="javascript:void(0);" onmouseover="abreMenu(1);" onmouseout="fechaMenu();" id="lk1">Dicas</a></li>
+            <li><a href="cadastro.asp">Cadastro</a></li>
+            <li class="last"><a href="contato.asp">Contato</a></li>
+        </ul>
+    </div>
+    <div class="submenu" onmouseover="mantemMenu()" onmouseout="fechaMenu()">&nbsp; </div>
+    <div style="clear:both"></div>
+    <script language="javascript">
+		var podeFechar = false;
+		var menus = new Array(3);
+		var menu = new Array(3);		
+		menus[0]="500";
+		menu[0]='<a href="fotosNil.asp">Nil</a> |  <a href="fotosLooks.asp">Looks</a> |  <a href="fotosNoivas.asp">Noivas</a>';
+		menus[1]="520";
+		menu[1]='<a href="dica2.asp">Hidratação</a> | <a href="dica3.asp">Pontas duplas</a>  |  <a href="dica1.asp">Frizz</a>';
+		menus[2]="130";
+		menu[2]='<a href="corpo.asp">Tratamentos corporais</a>  |  <a href="facial.asp">Estética facial</a>  |  <a href="equipeNilda.asp">Nilda</a>';
+		menus[3]="270";
+		menu[3] = '<a href="equipeAdriana.asp">Adriana</a>  |  <a href="equipeIrani.asp">Irani</a>  |   <a href="equipeNilce.asp">Nilce</a>  |   <a href="equipeStela.asp">Stela</a>'
+
+		podeFechar = false;
+		function abreMenu(param){
+			podeFechar = false;
+			limpaMenus();
+			$("#lk" + param).attr('class', 'ativo');
+			$(".submenu").html(menu[param]);
+			$(".submenu").css("visibility", "visible");
+			$(".submenu").css("margin-left", menus[param] + "px");			
+		}
+		function fechaMenu(){
+			podeFechar = true;
+			window.setTimeout("fechaMenu_ok()", 200);
+		}
+		function fechaMenu_ok(){
+			if(podeFechar == true){
+				$(".submenu").css("visibility", "hidden");
+				limpaMenus();
+			}
+		}
+		function mantemMenu(){
+			podeFechar = false;
+		}
+		function limpaMenus(){
+			$("#lk0").attr('class', '');
+			$("#lk1").attr('class', '');
+			$("#lk2").attr('class', '');						
+			$("#lk3").attr('class', '');
+		}
+	</script>
+    <div style="display:none"><img src="images/ajax-loader.gif" /></div><div id="pagina">
+
+<div class="paginaLeft">
+
+    	<div id="box" class="tam1 alt1">
+        	<span class="topo">Quem Somos</span>
+            <span>
+                    <p>O salão de beleza Nil Cabelereiras oferece uma equipe formado por especialistas com o objetivo de proporcionar experiências  inovadoras em cortes de cabelo, coloração e estética do corpo. A qualidade de nossos profissionais é determinada pela formação e anos de experiência. </p>
+                    <p>Com uma grande variedade de serviços como corte, coloração, penteado, tratamento, alongamento e reestruturação capilar e  uma infraestrutura de garçom, manobrista e estacionamento o Nil Cabelereiros acaba proporcionando tudo o que você precisa para seu tratamento de beleza.</p>
+                    <a href="quemsomos.asp" class="BoxLinkVejaMais"></a>
+            </span>
+        </div>
+        
+    	<div id="box" class="tam2 boxMargin alt1">
+        	<span class="topo">Destaque</span>
+            <p class="font1">Horário de <br />
+            Funcionamento</p>
+            <p><span class="font2">Segunda - Sábado</span><br />
+              <span class="font4">8:00h - 19:00h</span></p>
+              <p class="font3">Tel. 5535-3489</p>
+              <a href="#" class="boxLink1 linkboxpadrao" style="margin-right:15px">AGENDE UM HORÁRIO</a>
+        </div>
+        
+
+        
+        <div style="clear:both"></div>
+        
+<div id="box" class="tam3">
+        	<img src="images/homeDestaque1.jpg" width="185" height="71" /> <span class="topo">Dia da Noiva</span>
+            <span>
+                    <p>Deixe que as profissionais do Nil Cabeleireiros transforme um dos dias mais importante da sua vida em um sonho. Tratamento VIP para a estrela da noite.</p>
+                    <a href="noiva.asp" class="BoxLinkVejaMais"></a>
+            </span>
+        </div>       
+        
+        
+    	<div id="box" class="tam3">
+        	<img src="images/homeDestaque2.jpg" width="185" height="71" /> <span class="topo">Dicas</span>
+            <span>
+            <p>Como manter um lindo e invejável cabelo? Aqui você encontra dicas para manter a saúde do seu cabelo frequentando um salão de beleza e também com práticas domésticas.</p>
+                    <a href="dica1.asp" class="BoxLinkVejaMais"></a>
+          </span>
+      </div>   
+        
+        
+    	<div id="box" class="tam3">
+        	<img src="images/homeDestaque3.jpg" width="185" height="71" /> <span class="topo">Corpo</span>
+            <span>
+            <p>O que adianta ter um lindo cabelo se você não está feliz com seu corpo? O Nil Estética possui o que há de mais moderno em conceito de estética do corpo aliado a uma profissional com 26 anos de profissão.</p>
+                    <a href="corpo.asp" class="BoxLinkVejaMais"></a>
+          </span>
+      </div>              
+      
+      
+
+    	<div id="box" class="tam4" style="float:left"><span class="topo">Fotos</span>
+          <a href="fotosLooks.asp"><img src="images/galeria1.jpg" width="125" height="147" /><span>LOOKS</span></a>
+          <a href="fotosNoivas.asp" class="linkmeio"><img src="images/galeria2.jpg" width="125" height="147" /><span>NOIVAS</span></a>
+          <a href="fotosNil.asp"><img src="images/galeria3.jpg" width="125" height="147" /><span>NIL</span></a>      </div>     
+      
+<div id="box" class="tam4" style="width:181px;margin-left:18px;">
+        	<span class="topo">Cadastro</span>
+            <span class="texto">Saiba em primeira mão as tendências de cabelo, penteado, produtos e estilo. Faça o cadastro e receba tudo em primeiro mão.<a href="cadastro.asp" class="boxLink1 linkboxpadrao" style="padding-right:7px">&nbsp;CADASTRE-SE</a></span>
+              
+        </div>      
+        
+           
+
+</div>
+<div class="paginaRight">    
+        <div class="lblDestaque">divulgue <!-- AddThis Button BEGIN -->
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4bddfa5061c95e7d" style="z-index:1000"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4bddfa5061c95e7d"></script>
+<!-- AddThis Button END -->
+</div>
+<div id="boxRosa">
+        	<span class="topo">Multimídia</span>
+            <div>
+<object width="185" height="147"><param name="movie" value="http://www.youtube.com/v/uWK1KsGZQFY&amp;hl=pt_BR&amp;fs=1&amp;"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always">
+  <param name="wmode" value="transparent" />
+  </param><embed src="http://www.youtube.com/v/uWK1KsGZQFY&hl=pt_BR&fs=1&" width="185" height="147" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" movie="http://www.youtube.com/v/uWK1KsGZQFY&amp;hl=pt_BR&amp;fs=1&amp;" wmode="transparent"></embed></object>
+            </div>
+      </div>
+      
+		<div id="boxRosa" style="margin-top:20px;height:296px;">
+        	<img src="images/produtos.jpg" width="185" height="108" /> <span class="topo">Produtos</span>
+          <div><img src="images/produtos2.jpg" width="185" height="125" />
+          <a href="produtos.asp" class="linkMaisProdutos"><img src="images/btMaisProdutos.gif" width="78" height="12" border="0" /></a>
+          </div>
+      </div>      
+      
+		<div id="boxRosa" style="margin-top:20px;height:110px">
+          <span class="topo">Local</span>
+          <a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Av.+dos+Carinas+656,+Moema+-+sao+paulo&amp;sll=37.0625,-95.677068&amp;sspn=37.683309,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+das+Carin%C3%A1s,+656+-+Moema,+S%C3%A3o+Paulo,+04086-011,+Brasil&amp;ll=-23.61541,-46.664386&amp;spn=0.010656,0.022724&amp;t=h&amp;z=16" target="_blank"><img src="images/mapa.jpg" border="0" /></a>      </div>        
+
+</div>
+    
+  <div style="clear:both;display:block;height:20px;"></div>  
+  </div><div class="rodape">
+	<div class="tdSite">TODO SITE</div>
+    <div class="linksRodape">
+        <a href="/">* Página Inicial</a>
+        <a href="quemsomos.asp">* Quem Somos</a>
+        <a href="servicos.asp">* Serviços</a>
+        <a href="corpo.asp">* Corpo</a>
+        <a href="produtos.asp">* Produtos</a>
+    </div>
+    <div class="linksRodape">
+        <a href="noiva.asp">* Dia da Noiva</a>
+        <a href="dica1.asp">* Dicas</a>
+        <a href="#">* Equipe</a>
+        <a href="cadastro.asp">* Cadastro</a>
+    </div>
+    <div class="linksRodape">
+        <a href="fotosNil.asp">* Fotos</a>
+        <a href="http://maps.google.com/maps?f=q&source=s_q&hl=pt-BR&geocode=&q=Av.+dos+Carinas+656,+Moema+-+sao+paulo&sll=37.0625,-95.677068&sspn=37.683309,93.076172&ie=UTF8&hq=&hnear=Av.+das+Carin%C3%A1s,+656+-+Moema,+S%C3%A3o+Paulo,+04086-011,+Brasil&ll=-23.61541,-46.664386&spn=0.010656,0.022724&t=h&z=16" target="_blank">* Local</a>
+        <a href="contato.asp">* Contato</a>
+    </div>
+    
+    <div class="endereco">
+        Rua dos Carinas, 656 Moema<br />
+        São Paulo - SP   CEP 04090-010<br />
+        <br />
+        Tel. 5535-3489  /  5536-9904<br />
+        e-mail.  info@nilhair.com.br<br />
+    </div>
+    
+    
+    <div id="creditos">
+        <span>Site criado por: </span>
+        <span class="amarelo"><a href="http://www.coletivoonline.com.br" target="_blank" style="color:#D9E021">Coletivo Online</a></span>
+        <span class="site"><a href="http://www.nilhair.com.br">www.nilhair.com.br</a></span>
+        <span class="part3">Todos Direitos Reservados</span>
+		<span class="part3">Nil Cabeleireiras 2010</span>
+    </div>
+    <div style="display:none"><img src="images/btVejaMH.gif" /><img src="images/btVejaM.gif" /><img src="images/btVejaMaisH.gif" /><img src="images/btVejaMais.gif" /><img src="images/btEnviarH.gif" /><img src="images/btEnviar.gif" /></div>
+</div>       
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-16331892-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
